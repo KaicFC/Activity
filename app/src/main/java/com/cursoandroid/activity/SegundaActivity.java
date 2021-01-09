@@ -23,11 +23,17 @@ public class SegundaActivity extends AppCompatActivity {
         String nome = dados.getString("nome");
         int idade = dados.getInt("idade");
 
+            //Recuperar objetos
+            //Convertendo Serializable para Usuario (CAST)?
+        Usuario usuario = (Usuario) dados.getSerializable("objeto");
+
         //Configurar valores recuperados
         textNome.setText(nome);
         textIdade.setText(String.valueOf(idade));
 
-
+        //Valores do Objeto
+        //textNome.setText(usuario.getNome());
+        //textIdade.setText(usuario.getEmail());
     }
 
 

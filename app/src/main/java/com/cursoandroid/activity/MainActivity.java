@@ -25,9 +25,13 @@ public class MainActivity extends AppCompatActivity {
                 //Definir intent a ser passado no startActivity e qual será a Acitivity.
                 Intent intent = new Intent(getApplicationContext(), SegundaActivity.class);
 
+                    //Passar objetos entre Activities
+                    Usuario usuario = new Usuario("Kaic", "kaic@hotmail.com");
+
                 //Passar Dados
                 intent.putExtra("nome", "Kaic");
                 intent.putExtra("idade", 23);
+                    intent.putExtra("objeto", usuario);
 
                 //Abrir a Activity
                 startActivity(intent);
